@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>仓库管理系统</title>
+</head>
+<body>
+<form action="/getin" method="post">
+    {% csrf_token %}
+    <p>选择仓库区</p>
+    <select data-placeholder="选择仓库区" class="form-control" name="areaId" id="areaId">
+    <option value="1" hassubinfo="true">一仓库</option>
+    <option value="2" hassubinfo="true">二仓库</option>
+    <option value="3" hassubinfo="true">三仓库</option>
+        <option value="4" hassubinfo="true">四仓库</option>
+</select>
+    <br>
+    <P>选择列</P>
+        <select data-placeholder="选择列" class="form-control" name="lineId" id="lineId">
+    <option value="1" hassubinfo="true">第一列</option>
+    <option value="2" hassubinfo="true">第二列</option>
+    <option value="3" hassubinfo="true">第三列</option>
+        <option value="4" hassubinfo="true">第四列</option>
+            <option value="1" hassubinfo="true">第五列</option>
+</select>
+    <br>
+    <p>选择货架</p>
+        <select data-placeholder="选择货架" class="form-control" name="numId" id="numId">
+    <option value="1" hassubinfo="true">一号架</option>
+    <option value="2" hassubinfo="true">二号架</option>
+    <option value="3" hassubinfo="true">三号架</option>
+        <option value="4" hassubinfo="true">四号架</option>
+            <option value="1" hassubinfo="true">五号架</option>
+    <option value="2" hassubinfo="true">六号架</option>
+    <option value="3" hassubinfo="true">七号架</option>
+            <option value="1" hassubinfo="true">八号架</option>
+    <option value="2" hassubinfo="true">九号架</option>
+    <option value="3" hassubinfo="true">世号架</option>
+</select>
+    <br>
+
+    <p>请输入货物信息</p>
+    <input type="text" name="good"><br>
+    <input type="submit" name="submit" value="入库">
+    <br>
+</form>
+<p>{{info}}</p>
+<br>
+</body>
+</html>
+
+<a href="{% url 'userMain' %}">返回主界面</a>
+<br>
+<a href="{% url 'login' %}">返回登陆界面</a>

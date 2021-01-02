@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>仓库管理系统</title>
+</head>
+<body>
+<p>一仓库区共50个货架，已用{{one}}个货架，剩余{{oneleft}}个货架</p>
+<p>二仓库区共50个货架，已用{{two}}个货架，剩余{{twoleft}}个货架</p>
+<p>三仓库区共50个货架，已用{{three}}个货架，剩余{{threeleft}}个货架</p>
+<p>四仓库区共50个货架，已用{{four}}个货架，剩余{{fourleft}}个货架</p>
+<p>所有仓库区共200个货架，已用{{all}}个货架，剩余{{allleft}}个货架</p>
+<br>
+</body>
+</html>
+<a href="{% url 'userMain' %}">返回主界面</a>
+<br>
+<a href="{% url 'login' %}">返回登陆界面</a>
